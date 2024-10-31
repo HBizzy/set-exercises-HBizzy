@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Homepage"
+        android:textSize="24sp"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/holiday_requests_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Holiday requests" />
+
+    <Button
+        android:id="@+id/Edit_employee_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Employee details" />
+    <Button
+        android:id="@+id/Add_employee_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Employee details" />
+    <Button
+        android:id="@+id/Delete_employee_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Employee details" />
+    <Button
+        android:id="@+id/last_updated__employee_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last updated Employee details" />
+
+
+</LinearLayout>
