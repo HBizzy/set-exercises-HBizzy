@@ -19,6 +19,12 @@
         android:text="Holiday requests" />
 
     <Button
+        android:id="@+id/View_employee_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Employee details" />
+
+    <Button
         android:id="@+id/Edit_employee_details_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,11 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Delete Employee details" />
-    <Button
-        android:id="@+id/last_updated__employee_details_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Last updated Employee details" />
+
 
 
 </LinearLayout>

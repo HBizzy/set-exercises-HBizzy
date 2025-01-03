@@ -1,61 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View my details"
-        android:textSize="24sp"
-        android:gravity="center_horizontal" />
+    android:padding="8dp">
+
     <TextView
         android:id="@+id/firstNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="First Name"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/lastNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Name"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/departmentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Department"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/salaryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salary"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/leavesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Leaves"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:textSize="16sp" />
 
 </LinearLayout>

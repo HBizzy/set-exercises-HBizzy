@@ -17,10 +17,11 @@ public class UserHomepageActivity extends Activity {
         Button editDetailsButton = findViewById(R.id.editDetailsButton);
         Button manageLeaveButton = findViewById(R.id.manageLeaveButton);
 
-        viewDetailsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UserHomepageActivity.this, ViewDetailsActivity.class);
+        viewDetailsButton.setOnClickListener(v -> {
+            String username = getIntent().getStringExtra("username");
+            if (username != null) {
+                Intent intent = new Intent(UserHomepageActivity.this, ViewMyEmployeeDetailsActivity.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
         });
@@ -28,7 +29,7 @@ public class UserHomepageActivity extends Activity {
         editDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserHomepageActivity.this, EditDetailsActivity.class);
+                Intent intent = new Intent(UserHomepageActivity.this, EditMyDetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +37,7 @@ public class UserHomepageActivity extends Activity {
         manageLeaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserHomepageActivity.this, ManageLeaveActivity.class);
+                Intent intent = new Intent(UserHomepageActivity.this, ManageAnnualLeaveActivity.class);
                 startActivity(intent);
             }
         });

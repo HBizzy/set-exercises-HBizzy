@@ -13,19 +13,25 @@ public class AdminHomepageActivity extends Activity {
         setContentView(R.layout.admin_homepage);
 
         Button holidayRequestsButton = findViewById(R.id.holiday_requests_button);
+        Button viewEmployeeDetailsButton = findViewById(R.id.View_employee_details_button);
         Button editEmployeeDetailsButton = findViewById(R.id.Edit_employee_details_button);
         Button addEmployeeDetailsButton = findViewById(R.id.Add_employee_details_button);
         Button deleteEmployeeDetailsButton = findViewById(R.id.Delete_employee_details_button);
-        Button lastUpdatedEmployeeDetailsButton = findViewById(R.id.last_updated__employee_details_button);
 
         holidayRequestsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminHomepageActivity.this, HolidayRequestsActivity.class);
+                Intent intent = new Intent(AdminHomepageActivity.this, AdminHolidayRequestsActivity.class);
                 startActivity(intent);
             }
         });
-
+        viewEmployeeDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminHomepageActivity.this, ViewEmployeeDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
         editEmployeeDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,12 +56,5 @@ public class AdminHomepageActivity extends Activity {
             }
         });
 
-        lastUpdatedEmployeeDetailsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminHomepageActivity.this, LastUpdatedEmployeeDetailsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

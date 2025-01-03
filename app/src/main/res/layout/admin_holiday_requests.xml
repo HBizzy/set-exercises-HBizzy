@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Holiday Requests"
+        android:text="Manage Annual Leave"
         android:textSize="20sp"
         android:gravity="center_horizontal"
         android:paddingBottom="16dp" />
@@ -16,52 +16,95 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Bob: 2 days - 15/11 - 16/11" />
-
-        <Button
-            android:id="@+id/bob_approve_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="✓" />
+            android:text="First Name: " />
 
-        <Button
-            android:id="@+id/bob_reject_button"
+        <TextView
+            android:id="@+id/firstNameSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="✗" />
+            android:text="Last Name: " />
+
+        <TextView
+            android:id="@+id/lastNameSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Date: " />
+
+        <TextView
+            android:id="@+id/startDateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:orientation="horizontal">
-
-
-
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Geoff: 8 days - 31/12 - 7/1" />
-
-        <Button
-            android:id="@+id/geoff_approve_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="✓" />
+            android:text="End Date: " />
 
-        <Button
-            android:id="@+id/geoff_reject_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="✗" />
+        <TextView
+            android:id="@+id/endDateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approve/Deny: " />
+
+        <Spinner
+            android:id="@+id/approveDenySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE" />
 
 </LinearLayout>

@@ -4,45 +4,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit My Details"
-        android:textSize="20sp"
-        android:gravity="center_horizontal"
-        android:paddingBottom="16dp" />
-
+        android:text="Edit my details"
+        android:textSize="24sp"
+        android:gravity="center_horizontal" />
     <EditText
-        android:id="@+id/addressEditText"
+        android:id="@+id/firstNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Address" />
+        android:hint="First Name"
+        android:textSize="18sp"
+        android:padding="8dp" />
 
     <EditText
-        android:id="@+id/phoneEditText"
+        android:id="@+id/lastNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:inputType="phone" />
+        android:hint="Last Name"
+        android:textSize="18sp"
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:textSize="18sp"
+        android:padding="8dp" />
 
     <EditText
-        android:id="@+id/bankDetailsEditText"
+        android:id="@+id/departmentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Bank Details" />
+        android:hint="Department"
+        android:textSize="18sp"
+        android:padding="8dp" />
+
 
     <Button
-        android:id="@+id/saveChangesButton"
-        android:layout_width="match_parent"
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save Changes" />
+        android:text="Save" />
 
 </LinearLayout>

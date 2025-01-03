@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Employee Details"
+        android:text="Delete Employee"
         android:textSize="20sp"
         android:gravity="center_horizontal" />
 
@@ -19,9 +19,9 @@
         android:hint="Enter Employee ID" />
 
     <Button
-        android:id="@+id/searchEmployeeButton"
+        android:id="@+id/deleteEmployeeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search Employee" />
+        android:text="Delete Employee" />
 
 </LinearLayout>
