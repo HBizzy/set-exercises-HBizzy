@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,7 +21,7 @@ public class AdminHolidayRequestsActivity extends AppCompatActivity implements A
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_holiday_requests); // Use the correct layout name
+        setContentView(R.layout.admin_holiday_requests);
 
         // Initialize Spinners
         startDateSpinner = findViewById(R.id.startDateSpinner);
@@ -30,10 +31,10 @@ public class AdminHolidayRequestsActivity extends AppCompatActivity implements A
         approveDenySpinner = findViewById(R.id.approveDenySpinner);
 
         // Sample data for Spinners (replace with actual data)
-        List<String> startDates = Arrays.asList("01-01-2024", "02-01-2024", "03-01-2024"); // ...
-        List<String> endDates = Arrays.asList("31-01-2024", "28-02-2024", "31-03-2024"); // ...
-        List<String> firstNames = Arrays.asList("John", "Jane", "David"); // ...
-        List<String> lastNames = Arrays.asList("Doe", "Smith", "Lee"); // ...
+        List<String> startDates = Arrays.asList("01-01-2024", "02-01-2024", "03-01-2024");
+        List<String> endDates = Arrays.asList("31-01-2024", "28-02-2024", "31-03-2024");
+        List<String> firstNames = Arrays.asList("John", "Jane", "David");
+        List<String> lastNames = Arrays.asList("Doe", "Smith", "Lee");
         List<String> approveDenyOptions = Arrays.asList("Approve", "Deny");
 
         // Create ArrayAdapter for each Spinner
@@ -42,7 +43,25 @@ public class AdminHolidayRequestsActivity extends AppCompatActivity implements A
         startDateSpinner.setAdapter(startDateAdapter);
         startDateSpinner.setOnItemSelectedListener(this);
 
-        // Similar code for endDateSpinner, firstNameSpinner, lastNameSpinner, approveDenySpinner
+        ArrayAdapter<String> endDateAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, endDates);
+        endDateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        endDateSpinner.setAdapter(endDateAdapter);
+        endDateSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<String> firstNameAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, firstNames);
+        firstNameAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        firstNameSpinner.setAdapter(firstNameAdapter);
+        firstNameSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<String> lastNameAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lastNames);
+        lastNameAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        lastNameSpinner.setAdapter(lastNameAdapter);
+        lastNameSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<String> approveDenyAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, approveDenyOptions);
+        approveDenyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        approveDenySpinner.setAdapter(approveDenyAdapter);
+        approveDenySpinner.setOnItemSelectedListener(this);
 
         // Initialize Save Button
         saveButton = findViewById(R.id.saveButton);
@@ -60,12 +79,20 @@ public class AdminHolidayRequestsActivity extends AppCompatActivity implements A
     }
 
     @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        // Handle Spinner selection changes (optional)
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//        Toast.makeText(this, "Holiday request updated", Toast.LENGTH_SHORT).show();
+//        // Navigate back to Admin Home Page
+//        Intent intent = new Intent(this, AdminHomepageActivity.class);
+//        startActivity(intent);
+//        finish();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        // Handle Spinner selection changes (optional)
+        Toast.makeText(this, "Nothing selected", Toast.LENGTH_SHORT).show();
+        // Navigate back to Admin Home Page
+        Intent intent = new Intent(this, AdminHomepageActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

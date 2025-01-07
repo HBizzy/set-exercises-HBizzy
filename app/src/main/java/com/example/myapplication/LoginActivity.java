@@ -46,7 +46,7 @@ public class LoginActivity extends Activity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Invalid Email or password", Toast.LENGTH_SHORT).show();
                 }
             }
         });

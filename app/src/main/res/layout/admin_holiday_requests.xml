@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="First Name: " />
 
-        <TextView
+        <Spinner
             android:id="@+id/firstNameSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="Last Name: " />
 
-        <TextView
+        <Spinner
             android:id="@+id/lastNameSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="Start Date: " />
 
-        <TextView
+        <Spinner
             android:id="@+id/startDateSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="End Date: " />
 
-        <TextView
+        <Spinner
             android:id="@+id/endDateSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

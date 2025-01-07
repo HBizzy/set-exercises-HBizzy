@@ -1,3 +1,4 @@
+// ManageAnnualLeaveActivity.java
 package com.example.myapplication;
 
 import android.content.Intent;
@@ -27,6 +28,14 @@ public class ManageAnnualLeaveActivity extends AppCompatActivity {
 
         approvedHolidayTextView.setText(approvedHoliday);
         pendingHolidayTextView.setText(pendingHoliday);
+
+        // Check if there are new pending holidays from the intent
+        Intent intent = getIntent();
+        if (intent.hasExtra("startDate") && intent.hasExtra("endDate")) {
+            String startDate = intent.getStringExtra("startDate");
+            String endDate = intent.getStringExtra("endDate");
+            pendingHolidayTextView.setText(startDate + " - " + endDate);
+        }
 
         submitHolidayRequestButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,7 @@
+// HolidayRequestActivity.java
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
@@ -53,9 +54,12 @@ public class HolidayRequestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Validate and submit the holiday request
                 if (startDate != null && endDate != null) {
-                    // ... (Submit holiday request to your data source)
+                    Intent intent = new Intent(HolidayRequestActivity.this, ManageAnnualLeaveActivity.class);
+                    intent.putExtra("startDate", formatDate(startDate));
+                    intent.putExtra("endDate", formatDate(endDate));
+                    startActivity(intent);
                 } else {
-                    // Hanhdle case were start or end date is not selected
+                    // Handle case where start or end date is not selected
                 }
             }
         });
